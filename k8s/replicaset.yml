@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: gobernetes
+  labels:
+    app: gobernetes
+spec:
+  selector:
+    matchLabels:
+      app: gobernetes
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "gobernetes"
+    spec:
+      containers:
+        - name: gobernetes
+          image: "ricardocastanho/gobernetes"

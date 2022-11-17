@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "gobernetes"
+  labels:
+    app: "gobernetes"
+spec:
+  containers:
+    - name: gobernetes
+      image: "ricardocastanho/gobernetes"
